@@ -14,10 +14,15 @@ def Forward():
     global count
     count+=1
     if(count==5):
-        count=0
+        btnFwd = Button(mainScreen, text=">>", state=DISABLED)
+        btnFwd.grid(row =1, column=2)
     imgLabel.grid_forget()
     imgLabel = Label(image=imgList[count])
     imgLabel.grid(row = 0, column = 0, columnspan = 3)
+    
+    btnBack = Button(mainScreen, text="<<", command = Backward)
+    btnBack.grid(row = 1, column = 0)
+    
     
 
 
@@ -28,10 +33,16 @@ def Backward():
     global count
     count-=1
     if(count<=0):
-        count=5
+        btnBack = Button(mainScreen, text="<<", state=DISABLED)
+        btnBack.grid(row = 1, column = 0)
+
     imgLabel.grid_forget()
     imgLabel = Label(image=imgList[count])
     imgLabel.grid(row = 0, column = 0, columnspan = 3)
+
+    btnFwd = Button(mainScreen, text=">>", command= Forward)
+    btnFwd.grid(row =1, column=2)
+    
 
 mainScreen = Tk()
 mainScreen.title("Image Viewer")
@@ -58,7 +69,7 @@ imgList = [img1, img2, img3, img4, img5, img6]
 imgLabel = Label(image=img1)
 imgLabel.grid(row = 0, column = 0, columnspan = 3)
 
-btnBack = Button(mainScreen, text="<<", command = Backward)
+btnBack = Button(mainScreen, text="<<", state=DISABLED)
 btnExit = Button(mainScreen, text="Exit Program", command= mainScreen.quit)
 btnFwd = Button(mainScreen, text=">>", command= Forward)
 
