@@ -23,7 +23,7 @@ def Forward():
     btnBack = Button(mainScreen, text="<<", command = Backward)
     btnBack.grid(row = 1, column = 0)
 
-    statusLabel = Label(mainScreen, text= str(count+1)+" OF " + str(len(imgList)), bd=1, relief=SUNKEN, anchor=W)
+    statusLabel = Label(mainScreen, text= "Image "+str(count+1)+" OF " + str(len(imgList)), bd=1, relief=SUNKEN, anchor=W)
     statusLabel.grid(row=2, column=0, columnspan=3, sticky=W+E)
     
     
@@ -46,7 +46,7 @@ def Backward():
     btnFwd = Button(mainScreen, text=">>", command= Forward)
     btnFwd.grid(row =1, column=2)
 
-    statusLabel = Label(mainScreen, text= str(count+1)+" OF " + str(len(imgList)), bd=1, relief=SUNKEN, anchor=W)
+    statusLabel = Label(mainScreen, text="Image "+ str(count+1)+" OF " + str(len(imgList)), bd=1, relief=SUNKEN, anchor=W)
     statusLabel.grid(row=2, column=0, columnspan=3, sticky=W+E)
     
 
@@ -83,7 +83,7 @@ btnBack.grid(row = 1, column = 0)
 btnExit.grid(row = 1, column = 1)
 btnFwd.grid(row = 1, column = 2, pady=10)
 
-statusLabel = Label(mainScreen, text= str(count+1)+" OF " + str(len(imgList)), bd=1, relief=SUNKEN, anchor=W)
+statusLabel = Label(mainScreen, text="Image "+ str(count+1)+" OF " + str(len(imgList)), bd=1, relief=SUNKEN, anchor=W)
 statusLabel.grid(row=2, column=0, columnspan=3, sticky=W+E)
 
 
