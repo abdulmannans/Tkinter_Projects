@@ -2,7 +2,8 @@
 #Modified By Abdul Mannan
 
 from tkinter import *
-from PIL import ImageTk, Image
+
+from PIL import Image, ImageTk
 
 global count
 count = 0
@@ -16,6 +17,7 @@ def Forward():
     if(count==5):
         btnFwd = Button(mainScreen, text=">>", state=DISABLED)
         btnFwd.grid(row =1, column=2)
+        
     imgLabel.grid_forget()
     imgLabel = Label(image=imgList[count])
     imgLabel.grid(row = 0, column = 0, columnspan = 3)
