@@ -2,7 +2,7 @@
 #Modified By Abdul Mannan
 
 from tkinter import *
-from PIL import ImageTk,Image
+from PIL import ImageTk, Image
 
 global count
 count = 0
