@@ -54,6 +54,8 @@ def Backward():
 
 mainScreen = Tk()
 mainScreen.title("Image Viewer")
+mainScreen.geometry("505x570")
+mainScreen.resizable(0, 0)
 
 icoloca = "d:/python/tkinter projects/imageviewer/viewer.ico"
 mainScreen.iconbitmap(default=icoloca)
